@@ -9,7 +9,7 @@ buildscript {
     }
 
     dependencies {
-        classpath 'com.android.tools.build:gradle:8.6.0'
+        classpath 'com.android.tools.build:gradle:8.6.1'
         classpath "org.jetbrains.kotlin:kotlin-gradle-plugin:$kotlin_version"
     }
 }
@@ -30,7 +30,7 @@ android {
         namespace 'com.aaassseee.screen_brightness_android'
     }
 
-    compileSdkVersion 31
+    compileSdk 35
 
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_17
