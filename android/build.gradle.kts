@@ -16,11 +16,11 @@ repositories {
 android {
     namespace = 'com.aaassseee.screen_brightness_android'
 
-    compileSdk=37
+    compileSdk = 37
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_21
-        targetCompatibility JavaVersion.VERSION_21
+        sourceCompatibility = JavaVersion.VERSION_21
+        targetCompatibility = JavaVersion.VERSION_21
     }
 
     kotlinOptions {
@@ -34,6 +34,6 @@ android {
     }
 
     defaultConfig {
-        minSdk 24
+        minSdk = 24
     }
 }
