@@ -1,22 +1,27 @@
+import com.android.build.api.dsl.LibraryExtension
 import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.library")
-    id("org.jetbrains.kotlin.android")
+    kotlin("android")
 }
 
 group = "com.aaassseee.screen_brightness_android"
 version = "1.0-SNAPSHOT"
 
 repositories {
-        google()
-        mavenCentral()
-    }
+    google()
+    mavenCentral()
+}
 
-android {
+extensions.configure<LibraryExtension>("android") {
+
     namespace = "com.aaassseee.screen_brightness_android"
-
     compileSdk = 37
+
+    defaultConfig {
+        minSdk = 24
+    }
 
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_21
@@ -28,14 +33,10 @@ android {
             java.srcDirs("src/main/kotlin")
         }
     }
-
-    defaultConfig {
-        minSdk = 24
-    }
 }
 
 kotlin {
-        compilerOptions {
-            jvmTarget.set(JvmTarget.JVM_21)
-        }
+    compilerOptions {
+        jvmTarget.set(JvmTarget.JVM_21)
     }
+}
