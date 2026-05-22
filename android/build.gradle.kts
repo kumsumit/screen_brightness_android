@@ -1,9 +1,7 @@
 import com.android.build.api.dsl.LibraryExtension
-import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 plugins {
     id("com.android.library")
-    kotlin("android")
 }
 
 group = "com.aaassseee.screen_brightness_android"
@@ -35,8 +33,3 @@ extensions.configure<LibraryExtension>("android") {
     }
 }
 
-kotlin {
-    compilerOptions {
-        jvmTarget.set(JvmTarget.JVM_21)
-    }
-}
